@@ -2,16 +2,19 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Menu, User, LogOut, ChevronDown } from "lucide-react";
 import { logout} from "../../slices/authReducer";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function TopBar({ toggleSidebar }) {
   const { user } = useSelector((state) => state.auth);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const navigate = useNavigate();
-
+ const dispatch = useDispatch();
    const handleLogout = () => {
-     logout(); // Clear auth state
+     dispatch(logout());
      navigate("/login"); // Redirect to login page
+     localStorage.removeItem("token"); // Clear token from localStorage
+     localStorage.removeItem("user"); // Clear user info from localStorage
    };
 
   return (

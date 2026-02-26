@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { useRegisterMutation, useGetRolesQuery } from "../services/api/api";
+import { useRegisterMutation } from "../services/api/api";
 import { Eye, EyeOff, Lock, Mail, User, ShieldCheck } from "lucide-react"; // Renamed for clarity
 import { setTempEmail } from "../slices/authReducer";
 
 function Register() {
-  const { data: rolesData, isLoading: rolesLoading } = useGetRolesQuery();
   const [register, { isLoading }] = useRegisterMutation();
 
   const navigate = useNavigate();
@@ -17,8 +16,7 @@ function Register() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: "",
-    role: "",
+    password: ""
   });
 
   const handleChange = (e) => {
@@ -29,7 +27,7 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Don't forget this!
-    if (!name || !email || !password || !role) {
+    if (!name || !email || !password ) {
       toast.error("Please fill in all fields.");
       return;
     }
@@ -102,24 +100,7 @@ function Register() {
             </button>
           </div>
 
-          {/* Role Dropdown */}
-          <div className="relative">
-            <ShieldCheck className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
-            <select
-              name="role"
-              value={role}
-              onChange={handleChange}
-              className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none transition-all"
-            >
-              <option value="">Select your role</option>
-              {rolesData &&
-                rolesData.map((r) => (
-                  <option key={r._id} value={r.name}>
-                    {r.name.charAt(0).toUpperCase() + r.name.slice(1)}
-                  </option>
-                ))}
-            </select>
-          </div>
+  
 
           {/* Submit Button */}
           <button

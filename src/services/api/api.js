@@ -7,7 +7,7 @@ export const api = createApi({
             const token = getState().auth.token || localStorage.getItem("token");
             if (token) {
                 headers.set("Authorization", `Bearer ${token}`);
-                console.log("Authorization header set with token:", token);
+                
             } else {
                 console.log("No token found, proceeding without Authorization header");
             }
