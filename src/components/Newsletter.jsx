@@ -2,7 +2,7 @@ function Newsletter() {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-[3rem] p-10 md:p-20 text-center text-white relative overflow-hidden">
+        <div className="bg-linear-to-r from-blue-600 to-indigo-700 rounded-[3rem] p-10 md:p-20 text-center text-white relative overflow-hidden">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Stay in the loop
           </h2>

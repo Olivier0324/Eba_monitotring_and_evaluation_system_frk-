@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section className="relative bg-gray-900 h-[80vh] flex items-center overflow-hidden">
       {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-blue-600/20 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-2xl">
@@ -14,7 +14,7 @@ function Hero() {
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
             Elevate Your Style <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-400">
               Without Limits.
             </span>
           </h1>

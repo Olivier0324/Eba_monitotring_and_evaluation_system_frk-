@@ -25,7 +25,7 @@ function Unauthorized() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center mb-6">
-          <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white shadow-lg">
+          <div className="w-12 h-12 bg-linear-to-r from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white shadow-lg">
             <ShieldAlert size={28} />
           </div>
         </div>
@@ -50,7 +50,7 @@ function Unauthorized() {
               {/* Updated Contact Action */}
               <a
                 href={mailToLink}
-                className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all"
+                className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-linear-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Administrator

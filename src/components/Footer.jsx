@@ -20,7 +20,7 @@ function Footer() {
           {/* 1. BRAND SECTION */}
           <div className="space-y-8 xl:col-span-1">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
+              <div className="w-10 h-10 bg-linear-to-r from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
                 L
               </div>
               <span className="text-2xl font-bold text-white tracking-tight">
